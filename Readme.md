@@ -23,13 +23,13 @@ var geckoboard = require('geckoboard')('api-key');
 new Metrics()
   .every('10m', subscriptions('stripe-key'))
   .use(function (metrics) {
-    metrics.on('stripe subscriptions today', geckboard('widget-id').number);
+    metrics.on('stripe subscriptions today', geckoboard('widget-id').number);
   });
 ```
 
 #### Filter Customers
 
-You can further `filter` customers using [stripe-subscriptions](https://github.com/segmentio/stripe-chages) filters:
+You can further `filter` customers using [stripe-subscriptions](https://github.com/segmentio/stripe-charges) filters:
 
 ```js
 new Metrics()
